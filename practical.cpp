@@ -297,7 +297,7 @@
 
 
 
-// Operator Overloading of binary operators 
+// Practical - 8  - Operator Overloading of binary operators 
 // #include<iostream>
 // using namespace std;
 // class complex{ // complex class created
@@ -349,55 +349,134 @@
 
 
 
-// Operations and Programs on array using Class 
-#include<iostream>
-using namespace std;
+// Practical - 9 - Operations and Programs on array using Class 
+// #include<iostream>
+// using namespace std;
 
-class Array{
-    public:
-    int avgarr(int arr[], int n){ // member function for avg
-        int sum = 0 ;
-        for(int i = 0 ; i<n ; i++){
-            sum+=arr[i];
-        }
-        int avg = (sum/n); // avg calculation
-        return avg;
-    }
-    int maxnum(int arr[], int n){ // member function for max number 
-        int max=arr[0];
-        for(int i = 1 ; i<n ; i++){
-            if(arr[i]>max){
-                max = arr[i];
-            }
-        }
-        return max;
-    }
-    int secondmax(int arr[], int n){ // member function for second max number
-        int max=maxnum(arr, n); // calculation of max number by calling maxnum function 
-        int max2=arr[0];
-        for(int i = 1 ; i<n ; i++){
-            // if(arr[i]>max){
-            //     max = arr[i];
-            // }
-            if(arr[i]>max2 && arr[i]<max){
-                max2=arr[i];
-            }
-        }
-        return max2;
-    }
-};
-int main(){
-    int n;  // input n 
-    cout<<"Enter n : ";
-    cin>>n;
-    int ar[n];
-    cout<< "Enter Array elements :";
-    for(int i = 0 ; i<n ; i++){ // input of array elements 
-        cin>>ar[i];
-    }
-    Array A1; // A1 object created
-    cout<<"Avg is : "<<A1.avgarr(ar, n)<<endl; // avg output
-    cout<<"Max Number is : "<<A1.maxnum(ar, n)<<endl; // max number of array
-    cout<<"Second Max Number is : "<<A1.secondmax(ar, n)<<endl; //second max number of array
-    return 0;
-}
+// class Array{
+//     public:
+//     int avgarr(int arr[], int n){ // member function for avg
+//         int sum = 0 ;
+//         for(int i = 0 ; i<n ; i++){
+//             sum+=arr[i];
+//         }
+//         int avg = (sum/n); // avg calculation
+//         return avg;
+//     }
+//     int maxnum(int arr[], int n){ // member function for max number 
+//         int max=arr[0];
+//         for(int i = 1 ; i<n ; i++){
+//             if(arr[i]>max){
+//                 max = arr[i];
+//             }
+//         }
+//         return max;
+//     }
+//     int secondmax(int arr[], int n){ // member function for second max number
+//         int max=maxnum(arr, n); // calculation of max number by calling maxnum function 
+//         int max2=arr[0];
+//         for(int i = 1 ; i<n ; i++){
+//             // if(arr[i]>max){
+//             //     max = arr[i];
+//             // }
+//             if(arr[i]>max2 && arr[i]<max){
+//                 max2=arr[i];
+//             }
+//         }
+//         return max2;
+//     }
+// };
+// int main(){
+//     int n;  // input n 
+//     cout<<"Enter n : ";
+//     cin>>n;
+//     int ar[n];
+//     cout<< "Enter Array elements :";
+//     for(int i = 0 ; i<n ; i++){ // input of array elements 
+//         cin>>ar[i];
+//     }
+//     Array A1; // A1 object created
+//     cout<<"Avg is : "<<A1.avgarr(ar, n)<<endl; // avg output
+//     cout<<"Max Number is : "<<A1.maxnum(ar, n)<<endl; // max number of array
+//     cout<<"Second Max Number is : "<<A1.secondmax(ar, n)<<endl; //second max number of array
+//     return 0;
+// }
+
+
+
+
+
+
+// Practical 10 - To print all the prime numbers between two range of numbers
+// #include<iostream>
+// using namespace std;
+// int printprime(int range1, int range2);
+// int main(){
+//     int start,end,total_numbers;
+//     cout<<"Enter Start Value : ";
+//     cin>>start;
+//     cout<<"Enter Range Value : ";
+//     cin>>end;
+//     total_numbers= printprime(start,end);
+//     cout<<"Total Number of Prime Numbers between "<<start<<" and "<<end<<" is : "<<total_numbers<<endl;
+//     return 0;
+// }
+// int printprime(int range1, int range2){
+//     if(range1>range2){
+//         range1= range1+range2;
+//         range2= range1-range2;
+//         range1=range1-range2;
+//     }
+//     int count = 0 ;
+//     for(int i = range1; i<=range2; i++){
+//         if(range1<=2) continue;
+//         bool isprime = true;
+//         for(int j = 2 ; j*j<= i ; j++){
+//             if(i%j == 0){
+//                 isprime = false;
+//                 break;
+//             }
+//         }
+//         if(isprime) count++;
+//     }
+//     return count;
+// }
+
+
+
+
+
+
+// Practical - 11 - Program to reverse an array and print it 
+// #include<iostream>
+// using namespace std;
+// void revarray(int arr[],int n);
+// int main(){
+//     int n ;
+//     cout<<"Enter how many elements you want to add in the array : \n";
+//     cin>>n;
+//     int arr[n];
+//     cout<<"Enter Array elements : \n";
+//     for(int i = 0 ; i< n ; i++){
+//         cout<<"Enter "<<i+1<<" element : \n";
+//         cin>>arr[i];
+//     }
+//     cout<<"Printing the array :\n";
+//     for(int i = 0 ; i<n ; i++){
+//         cout<<arr[i]<<endl;
+//     }
+//     revarray(arr, n);
+//     cout<<"Printing the updated array :\n";
+//     for(int i = 0 ; i<n ; i++){
+//         cout<<arr[i]<<endl;
+//     }
+
+//     return 0; 
+// }
+// void revarray(int arr[],int n ){
+//     for(int i = 0 ; i <n/2; i++){
+//         arr[i]=arr[i] + arr[n-i-1];
+//         arr[n-i-1]=arr[i] - arr[n-i-1];
+//         arr[i]=arr[i] - arr[n-i-1];
+//     }
+// }
