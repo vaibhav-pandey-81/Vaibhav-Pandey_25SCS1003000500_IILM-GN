@@ -448,35 +448,35 @@
 
 
 // Practical - 11 - Program to reverse an array and print it 
-// #include<iostream>
-// using namespace std;
-// void revarray(int arr[],int n);
-// int main(){
-//     int n ;
-//     cout<<"Enter how many elements you want to add in the array : \n";
-//     cin>>n;
-//     int arr[n];
-//     cout<<"Enter Array elements : \n";
-//     for(int i = 0 ; i< n ; i++){
-//         cout<<"Enter "<<i+1<<" element : \n";
-//         cin>>arr[i];
-//     }
-//     cout<<"Printing the array :\n";
-//     for(int i = 0 ; i<n ; i++){
-//         cout<<arr[i]<<endl;
-//     }
-//     revarray(arr, n);
-//     cout<<"Printing the updated array :\n";
-//     for(int i = 0 ; i<n ; i++){
-//         cout<<arr[i]<<endl;
-//     }
+#include<iostream>
+using namespace std;
+void revarray(int arr[],int n);
+int main(){
+    int n ;
+    cout<<"Enter how many elements you want to add in the array : \n";
+    cin>>n;
+    int arr[n];
+    cout<<"Enter Array elements : \n";
+    for(int i = 0 ; i< n ; i++){
+        cout<<"Enter "<<i+1<<" element : \n";
+        cin>>arr[i];
+    }
+    cout<<"Printing the array :\n";
+    for(int i = 0 ; i<n ; i++){
+        cout<<arr[i]<<endl;
+    }
+    revarray(arr, n);
+    cout<<"Printing the updated array :\n";
+    for(int i = 0 ; i<n ; i++){
+        cout<<arr[i]<<endl;
+    }
 
-//     return 0; 
-// }
-// void revarray(int arr[],int n ){
-//     for(int i = 0 ; i <n/2; i++){
-//         arr[i]=arr[i] + arr[n-i-1];
-//         arr[n-i-1]=arr[i] - arr[n-i-1];
-//         arr[i]=arr[i] - arr[n-i-1];
-//     }
-// }
+    return 0; 
+}
+void revarray(int arr[],int n ){
+    for(int i = 0 ; i <n/2; i++){
+        arr[i]=arr[i] + arr[n-i-1];
+        arr[n-i-1]=arr[i] - arr[n-i-1];
+        arr[i]=arr[i] - arr[n-i-1];
+    }
+}
